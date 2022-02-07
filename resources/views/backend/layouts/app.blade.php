@@ -280,9 +280,12 @@
                             <li>
                                 <a href="{{route('roles.index')}}">
                                     <i class="metismenu-icon pe-7s-plugin"></i>Roles
-                                    
                                 </a>
-                               
+                            </li>
+                            <li>
+                                <a href="{{route('users.index')}}">
+                                    <i class="metismenu-icon pe-7s-users"></i>Users
+                                </a>
                             </li>
                             {{-- <li>
                                 <a href="#">

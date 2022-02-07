@@ -67,4 +67,12 @@ class User extends Authenticatable
  php artisan make:controller RolesController --resource
 ```
 
-## Step: 6 Role CRUD With
+## Step: 8 Role CRUD
+
+## Step: 9 Make User Controller 
+
+```
+ php artisan make:controller UserController --resource
+```
+
+## Step: 9 User CRUD
