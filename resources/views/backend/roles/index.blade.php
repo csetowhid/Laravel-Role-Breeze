@@ -4,7 +4,7 @@
         <div class="app-page-title">
             <div class="page-title-wrapper">
                 <div class="page-title-actions">
-                    <a class="btn btn-lg btn-transition btn btn-outline-success" href="{{route('permission.create')}}">
+                    <a class="btn btn-lg btn-transition btn btn-outline-success" href="{{route('roles.create')}}">
                         Create 
                     </a>
                 </div>    
@@ -17,15 +17,21 @@
                     <th>SL</th>
                     <th>Name</th>
                     <th>Guard Name</th>
+                    <th>Permission</th>
                     <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                    @forelse ($permissions as $permission)
+                    @forelse ($roles as $role)
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td>{{$permission->name}}</td>
-                        <td>{{$permission->guard_name}}</td>
+                        <td>{{$role->name}}</td>
+                        <td>{{$role->guard_name}}</td>
+                        <td>
+                            @foreach ($role->permissions as $permission)
+                                <button class="btn btn-success">{{$permission->name}}</button>
+                            @endforeach
+                        </td>
                         <td>Action</td>
                     </tr>
                     @empty

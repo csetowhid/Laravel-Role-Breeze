@@ -60,3 +60,11 @@ class User extends Authenticatable
 ```
 
 ## Step: 6 Permission CRUD With default web guard
+
+## Step: 7 Make Role Controller 
+
+```
+ php artisan make:controller RolesController --resource
+```
+
+## Step: 6 Role CRUD With

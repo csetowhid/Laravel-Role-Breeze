@@ -278,6 +278,13 @@
                                 </ul> --}}
                             </li>
                             <li>
+                                <a href="{{route('roles.index')}}">
+                                    <i class="metismenu-icon pe-7s-plugin"></i>Roles
+                                    
+                                </a>
+                               
+                            </li>
+                            {{-- <li>
                                 <a href="#">
                                     <i class="metismenu-icon pe-7s-plugin"></i>Applications
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
@@ -322,8 +329,8 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="app-sidebar__heading">UI Components</li>
+                            </li> --}}
+                            {{-- <li class="app-sidebar__heading">UI Components</li>
                             <li>
                                 <a href="#">
                                     <i class="metismenu-icon pe-7s-diamond"></i> Elements
@@ -619,7 +626,7 @@
                                 <a href="charts-sparklines.html">
                                     <i class="metismenu-icon pe-7s-graph1"></i>Chart Sparklines
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
