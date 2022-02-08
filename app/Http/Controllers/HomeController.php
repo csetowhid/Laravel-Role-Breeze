@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    // function __construct()
-    // {
-    //     $this->middleware('dashboard:dashboard-show', ['only' => ['index']]);
-    // }
+    function __construct()
+    {
+        $this->middleware('permission:dashboard-show', ['only' => ['index']]);
+    }
     public function index()
     {
         return view('backend.index');

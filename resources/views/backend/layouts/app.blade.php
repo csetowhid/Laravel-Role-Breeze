@@ -172,67 +172,37 @@
                     <div class="app-sidebar__inner">
                         <ul class="vertical-nav-menu">
                             <li class="app-sidebar__heading">Menu</li>
+                            @can('dashboard-show')
                             <li class="mm-active">
                                 <a href="{{URL::to('/dashboard')}}">
                                     <i class="metismenu-icon pe-7s-rocket"></i>Dashboards
                                 </a>
                             </li>
-                            {{-- @can('permission-list') --}}
+                            @endcan
+                            @can('permission-list')
                             <li>
                                 <a href="{{route('permission.index')}}">
                                     <i class="metismenu-icon pe-7s-browser"></i>Permission
                                     {{-- <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i> --}}
                                 </a>
-                                {{-- <ul>
-                                    <li>
-                                        <a href="pages-login.html">
-                                            <i class="metismenu-icon"></i> Login
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-login-boxed.html">
-                                            <i class="metismenu-icon"></i>Login Boxed
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-register.html">
-                                            <i class="metismenu-icon"></i>Register
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-register-boxed.html">
-                                            <i class="metismenu-icon"></i>Register Boxed
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-forgot-password.html">
-                                            <i class="metismenu-icon"></i>Forgot Password
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="pages-forgot-password-boxed.html">
-                                            <i class="metismenu-icon"></i>Forgot Password Boxed
-                                        </a>
-                                    </li>
-                                </ul> --}}
                             </li>
-                            {{-- @endcan --}}
+                            @endcan
 
-                            {{-- @can('role-list') --}}
+                            @can('role-list')
                             <li>
                                 <a href="{{route('roles.index')}}">
                                     <i class="metismenu-icon pe-7s-plugin"></i>Roles
                                 </a>
                             </li>
-                            {{-- @endcan --}}
+                            @endcan
 
-                            {{-- @can('create user') --}}
+                            @can('user-list')
                             <li>
                                 <a href="{{route('users.index')}}">
                                     <i class="metismenu-icon pe-7s-users"></i>Users
                                 </a>
                             </li>
-                            {{-- @endcan --}}
+                            @endcan
                             
                             
                             
