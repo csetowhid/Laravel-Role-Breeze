@@ -32,7 +32,7 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::resource('permission',PermissionController::class);
     Route::resource('roles',RolesController::class);
-    Route::resource('users',UserController::class);
+    Route::resource('users',UserController::class)->except('show');
 });
 
 

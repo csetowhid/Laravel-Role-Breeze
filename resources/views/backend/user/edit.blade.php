@@ -2,7 +2,7 @@
 @section('content')
 <div class="main-card mb-3 card">
     <div class="card-body">
-        <h5 class="card-title">Create New User</h5>
+        <h5 class="card-title">Edit User</h5>
         <form id="signupForm" class="col-md-10 mx-auto" method="post" action="{{route('users.update',$user->id)}}">
             @csrf
             @method("PUT")
@@ -19,10 +19,10 @@
                 </div>
             </div>
 
-            
             <div class="form-group">
                 <label for="exampleCustomSelect">Select Role</label>
-                <select type="select" id="exampleCustomSelect" name="roles[]" class="custom-select" multiple>
+                <select multiple="" type="select" id="exampleCustomMutlipleSelect"
+                class="custom-select"  name="roles[]">
                     <option value="">Select</option>
                     @foreach ($roles as $role)
                         <option value="{{ $role->name }}" {{ $user->hasRole($role->name) ? 'selected' : '' }}>{{ $role->name }}</option>

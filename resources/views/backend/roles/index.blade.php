@@ -32,7 +32,10 @@
                                 <button class="btn btn-success">{{$permission->name}}</button>
                             @endforeach
                         </td>
-                        <td>Action</td>
+                        <td>
+                            <a class="mb-2 mr-2 btn-transition btn btn-outline-success" href="{{route('roles.edit',$role->id)}}">Edit</a>
+                            <a class="delete-row mb-2 mr-2 btn-transition btn btn-outline-danger" href="{{route('roles.destroy',$role->id)}}">Delete</a>
+                        </td>
                     </tr>
                     @empty
                         <tr>

@@ -18,9 +18,6 @@ class UserController extends Controller
     public function index()
     {
         $data['users'] = User::all();
-        // $user = User::all();
-        // $data['roles'] = $user->getRoleNames()->first();
-        // dd($data);
         return view('backend.user.index',$data);
     }
 
@@ -132,6 +129,10 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::where('id',$id)->delete();
+        if(!empty($user)){
+            return back();
+        }
+        return back();
     }
 }

@@ -87,7 +87,9 @@ class RolesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['role'] = Role::where('id',$id)->first();
+        $data['permissions'] = Permission::all();
+        return view('backend.roles.edit',$data);
     }
 
     /**
@@ -99,7 +101,20 @@ class RolesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|unique:roles,name,'.$id
+        ]);
+
+        $role = Role::where('id',$id)->first();
+        $role->name = $request->name;
+
+        if($role->update()){
+            if (!empty($request->permissions)) {
+                $role->syncPermissions($request->permissions);
+            }
+            return redirect()->route("roles.index");
+        }
+        return back();
     }
 
     /**
