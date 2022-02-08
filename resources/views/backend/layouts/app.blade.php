@@ -239,8 +239,9 @@
                                     <i class="metismenu-icon pe-7s-rocket"></i>Dashboards
                                 </a>
                             </li>
+                            @can('create permission')
                             <li>
-                                <a href="{{route('permission.index')}}">
+                                <a href="{{route('permission-list')}}">
                                     <i class="metismenu-icon pe-7s-browser"></i>Permission
                                     {{-- <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i> --}}
                                 </a>
@@ -277,16 +278,26 @@
                                     </li>
                                 </ul> --}}
                             </li>
+                            @endcan
+
+                            @can('create role')
                             <li>
-                                <a href="{{route('roles.index')}}">
+                                <a href="{{route('role-list')}}">
                                     <i class="metismenu-icon pe-7s-plugin"></i>Roles
                                 </a>
                             </li>
+                            @endcan
+
+                            {{-- @can('create user') --}}
                             <li>
                                 <a href="{{route('users.index')}}">
                                     <i class="metismenu-icon pe-7s-users"></i>Users
                                 </a>
                             </li>
+                            {{-- @endcan --}}
+                            
+                            
+                            
                             {{-- <li>
                                 <a href="#">
                                     <i class="metismenu-icon pe-7s-plugin"></i>Applications
