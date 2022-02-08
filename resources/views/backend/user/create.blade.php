@@ -11,16 +11,47 @@
                     <input type="text" class="form-control" id="firstname" name="name" placeholder="Enter Your Name" />
                 </div>
             </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password" />
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm password</label>
+                <div>
+                    <input type="password" class="form-control" id="confirm_password" name="password_confirmation" placeholder="Enter Confirm password" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleCustomSelect">Select Role</label>
+                <select type="select" id="exampleCustomSelect" name="role" class="custom-select">
+                    <option value="">Select</option>
+                    @forelse ($roles as $role)
+                        <option>{{$role->name}}</option>
+                    @empty
+                    <option>No Role Found</option>
+                    @endforelse
+                </select>
+            </div>
             {{-- <div class="form-group">
                 <label for="firstname">Permissions</label>
                 <div>
-                @foreach($permissions as $permission)
+                @forelse($permissions as $permission)
                 <div class="position-relative form-check">
                     <label class="form-check-label">
                         <input type="checkbox" class="form-check-input" name="permissions[]" value="{{$permission->id}}"> {{$permission->name}}
                     </label>
                 </div>
-                @endforeach
+                @empty
+                    
+                @endforelse
                 </div>
             </div> --}}
             

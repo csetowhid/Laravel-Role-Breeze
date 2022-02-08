@@ -26,7 +26,14 @@
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td>{{$user->name}}</td>
-                        <td>{{$user->email}}</td>
+                        {{-- <td>{{$user->email}}</td> --}}
+                        <td>
+                            @foreach ($user->roles as $role)
+                            <span class="badge badge-info mr-1">
+                                {{ $role->name }}
+                            </span>
+                        @endforeach
+                        </td>
                         <td>{{$user->email}}</td>
                         <td>Action</td>
                     </tr>
