@@ -76,3 +76,7 @@ class User extends Authenticatable
 ```
 
 ## Step: 9 User CRUD
+
+## Step: 10 Blade Directives
+
+## Step: 11 Middleware

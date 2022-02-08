@@ -90,7 +90,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['user'] = User::where('id',$id)->first();
+        $data['roles'] = Role::all();
+        return view('backend.user.edit',$data);
     }
 
     /**
@@ -102,7 +104,24 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email,'.$id
+        ]);
+
+        $user = User::where('id',$id)->first();
+        $user->name = $request->name;
+        $user->email = $request->email;
+
+        if($user->update()){
+            if ($request->roles) {
+                $user->roles()->detach();
+                $user->assignRole($request->roles);
+            }
+            return redirect()->route("users.index");
+        }
+
+        return back();
     }
 
     /**

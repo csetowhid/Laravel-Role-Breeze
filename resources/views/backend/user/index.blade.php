@@ -35,7 +35,10 @@
                         @endforeach
                         </td>
                         <td>{{$user->email}}</td>
-                        <td>Action</td>
+                        <td>
+                            <a class="mb-2 mr-2 btn-transition btn btn-outline-success" href="{{route('users.edit',$user->id)}}">Edit</a>
+                            <button class="mb-2 mr-2 btn-transition btn btn-outline-danger">Delete</button>
+                        </td>
                     </tr>
                     @empty
                         <tr>
