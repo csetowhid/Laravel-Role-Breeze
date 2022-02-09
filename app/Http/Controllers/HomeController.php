@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class HomeController extends Controller
 {
@@ -12,6 +15,9 @@ class HomeController extends Controller
     }
     public function index()
     {
-        return view('backend.index');
+        $data['users'] = User::count();
+        $data['roles'] = Role::count();
+        $data['permissions'] = Permission::count();
+        return view('backend.index',$data);
     }
 }

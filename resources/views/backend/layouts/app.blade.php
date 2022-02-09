@@ -56,7 +56,7 @@
                             <button type="button" data-toggle="dropdown" class="p-0 mr-2 btn btn-link">
                                 <span class="icon-wrapper icon-wrapper-alt rounded-circle">
                                     <span class="icon-wrapper-bg bg-focus"></span>
-                                    <span class="language-icon opacity-8 flag large DE"></span>
+                                    <span class="language-icon opacity-8 flag large US"></span>
                                 </span>
                             </button>
                             <div tabindex="-1" role="menu" aria-hidden="true" class="rm-pointers dropdown-menu dropdown-menu-right">
@@ -70,25 +70,12 @@
                                 </div>
                                 <h6 tabindex="-1" class="dropdown-header"> Popular Languages</h6>
                                 <button type="button" tabindex="0" class="dropdown-item">
-                                    <span class="mr-3 opacity-8 flag large US"></span> USA
-                                </button>
-                                <button type="button" tabindex="0" class="dropdown-item">
-                                    <span class="mr-3 opacity-8 flag large CH"></span> Switzerland
-                                </button>
-                                <button type="button" tabindex="0" class="dropdown-item">
                                     <span class="mr-3 opacity-8 flag large FR"></span> France
                                 </button>
                                 <button type="button" tabindex="0" class="dropdown-item">
                                     <span class="mr-3 opacity-8 flag large ES"></span>Spain
                                 </button>
-                                <div tabindex="-1" class="dropdown-divider"></div>
-                                <h6 tabindex="-1" class="dropdown-header">Others</h6>
-                                <button type="button" tabindex="0" class="dropdown-item active">
-                                    <span class="mr-3 opacity-8 flag large DE"></span> Germany
-                                </button>
-                                <button type="button" tabindex="0" class="dropdown-item">
-                                    <span class="mr-3 opacity-8 flag large IT"></span> Italy
-                                </button>
+                       
                             </div>
                         </div>
                     
