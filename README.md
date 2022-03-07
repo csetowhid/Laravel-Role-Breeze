@@ -79,10 +79,15 @@ class User extends Authenticatable
 
 ## Step: 10 Blade Directives
 
-## Step: 11 Middleware
+## Step: 11 Kernel
+
+## Step: 12 Run Migration
+
+`php artisan migrate:fresh --seed`
 
 # Login Credentials
 
 ### Superadmin
 Email: `superadmin@gmail.com`\
 Password: `12345678`
+
