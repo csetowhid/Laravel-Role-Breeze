@@ -80,3 +80,9 @@ class User extends Authenticatable
 ## Step: 10 Blade Directives
 
 ## Step: 11 Middleware
+
+# Login Credentials
+
+### Superadmin
+Email: `superadmin@gmail.com`\
+Password: `12345678`
