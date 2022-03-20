@@ -80,7 +80,12 @@ class User extends Authenticatable
 ## Step: 10 Blade Directives
 
 ## Step: 11 Kernel
-
+Add This Code to `Http->Kernel.php`
+```
+'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
+'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
+'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
+```
 ## Step: 12 Run Migration
 
 `php artisan migrate:fresh --seed`

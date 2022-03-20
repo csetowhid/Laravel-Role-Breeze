@@ -9,6 +9,9 @@
                 <label for="firstname">Permission name</label>
                 <div>
                     <input type="text" class="form-control" id="firstname" name="name" placeholder="Enter Your Permission" />
+                    @if ($errors->has('name'))
+                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                    @endif
                 </div>
             </div>
             
