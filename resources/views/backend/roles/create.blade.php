@@ -18,15 +18,30 @@
                     <label class="form-check-label">All</label>
                 </div>
                 <hr>
-                <div>
-                @foreach($permissions as $permission)
-                <div class="position-relative form-check">
-                    <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="permissions[]" value="{{$permission->id}}"> {{$permission->name}}
-                    </label>
-                </div>
+                @php $i = 1; @endphp
+                @foreach ($permission_group as $group)
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="text-capitalize font-weight-bold">{{$group->group_name}}</label>
+                        </div>
+                        <div class="col-md-6">
+                            @php
+                            $permissions = \App\Models\User::getpermissions($group->group_name);
+                            $j = 1;
+                            @endphp
+                            @foreach($permissions as $permission)
+                  
+                            <div class="position-relative form-check">
+                                    <input type="checkbox" class="form-check-input" name="permissions[]" value="{{$permission->id}}"> 
+                                    <label class="text-capitalize">{{$permission->name}}</label>
+                            </div>
+                            @php  $j++; @endphp
+                            @endforeach
+                            <br>
+                        </div>
+                    </div>
+                @php  $i++; @endphp
                 @endforeach
-                </div>
             </div>
             
             <div class="form-group">

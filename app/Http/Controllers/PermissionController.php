@@ -50,7 +50,8 @@ class PermissionController extends Controller
         ]);
 
         $permission = Permission::create([
-            'name' => $request->name
+            'name' => $request->name,
+            'group_name' => $request->group_name
         ]);
 
         if (!empty($permission)) {
