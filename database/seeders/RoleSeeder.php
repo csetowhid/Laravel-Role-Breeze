@@ -20,11 +20,13 @@ class RoleSeeder extends Seeder
         $permissions = [
 
             [
+                'group_name' => 'dashboard',
                 'permissions' => [
                     'dashboard-show',
                 ]
             ],
             [
+                'group_name' => 'role',
                 'permissions' => [
                     'role-create',
                     'role-list',
@@ -33,6 +35,7 @@ class RoleSeeder extends Seeder
                 ]
             ],
             [
+                'group_name' => 'permission',
                 'permissions' => [
                     'permission-list',
                     'permission-create',
@@ -41,6 +44,7 @@ class RoleSeeder extends Seeder
                 ]
             ],
             [
+                'group_name' => 'user',
                 'permissions' => [
                     'user-list',
                     'user-create',
@@ -54,13 +58,12 @@ class RoleSeeder extends Seeder
         $roleSuperAdmin = Role::create(['name' => 'Admin']);
         $roleUser = Role::create(['name' => 'User']);
 
-
         // Create and Assign Permissions
         for ($i = 0; $i < count($permissions); $i++) {
-            // $permissionGroup = $permissions[$i]['group_name'];
+            $permissionGroup = $permissions[$i]['group_name'];
             for ($j = 0; $j < count($permissions[$i]['permissions']); $j++) {
                 // Create Permission
-                $permission = Permission::create(['name' => $permissions[$i]['permissions'][$j], 'guard_name' => 'web']);
+                $permission = Permission::create(['name' => $permissions[$i]['permissions'][$j], 'group_name' => $permissionGroup, 'guard_name' => 'web']);
                 $roleSuperAdmin->givePermissionTo($permission);
                 $permission->assignRole($roleSuperAdmin);
             }
@@ -72,12 +75,5 @@ class RoleSeeder extends Seeder
             $admin->assignRole($roleSuperAdmin);
         }
 
-
-        // DB::table('model_has_roles')->insert([
-        //     'role_id' => 1,
-        //     'model_type' => 'App\Models\User',
-        //     'model_id' => 1,
-        //     ]
-        // );
     }
 }
