@@ -14,6 +14,15 @@
                     @endif
                 </div>
             </div>
+            <div class="form-group">
+                <label>Permission Group</label>
+                <div>
+                    <input type="text" class="form-control" name="group_name" placeholder="Enter Permission Group" required />
+                    @if ($errors->has('group_name'))
+                        <span class="text-danger">{{ $errors->first('group_name') }}</span>
+                    @endif
+                </div>
+            </div>
             
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Save</button>
