@@ -13,6 +13,11 @@
             </div>
             <div class="form-group">
                 <label for="firstname">Permissions</label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkAll">
+                    <label class="form-check-label">All</label>
+                </div>
+                <hr>
                 <div>
                 @foreach($permissions as $permission)
                 <div class="position-relative form-check">
@@ -31,3 +36,16 @@
     </div>
 </div>
 @endsection
+@push('js')
+<script>
+    $("#checkAll").click(function(){
+             if($(this).is(':checked')){
+                 // check all the checkbox
+                 $('input[type=checkbox]').prop('checked', true);
+             }else{
+                 // un check all the checkbox
+                 $('input[type=checkbox]').prop('checked', false);
+             }
+         });
+</script>
+@endpush
