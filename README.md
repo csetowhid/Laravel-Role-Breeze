@@ -60,6 +60,18 @@ class User extends Authenticatable
 ```
 
 ## Step: 6 Permission CRUD With default web guard
+### Add Group Name Field In Permissions Table
+```
+Schema::create($tableNames['permissions'], function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');       // For MySQL 8.0 use string('name', 125);
+            $table->string('guard_name'); // For MySQL 8.0 use string('guard_name', 125);
+            $table->string('group_name')->nullable();
+            $table->timestamps();
+
+            $table->unique(['name', 'guard_name']);
+        });
+```
 
 ## Step: 7 Make Role Controller 
 

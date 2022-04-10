@@ -16,6 +16,7 @@
                 <tr>
                     <th>SL</th>
                     <th>Name</th>
+                    <th>Group Name</th>
                     <th>Guard Name</th>
                     <th>Action</th>
                 </tr>
@@ -25,6 +26,7 @@
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td>{{$permission->name}}</td>
+                        <td>{{$permission->group_name}}</td>
                         <td>{{$permission->guard_name}}</td>
                         <td>Action</td>
                     </tr>
