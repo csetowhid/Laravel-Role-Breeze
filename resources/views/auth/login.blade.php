@@ -4,6 +4,10 @@
             <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </a>
+            <p style="color: green">Multi Role Management</p>
+            <h5>Superadmin: <code>superadmin@gmail.com</code></h5>
+            <h5>User: <code>user@gmail.com</code></h5>
+            <h5>Password: <code>12345678</code></h5>
         </x-slot>
 
         <!-- Session Status -->
