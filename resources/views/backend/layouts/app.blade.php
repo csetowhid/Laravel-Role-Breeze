@@ -50,44 +50,13 @@
             </div>
             <div class="app-header__content">
                 <div class="app-header-right">
-                    <div class="header-dots">
-                  
-                        <div class="dropdown">
-                            <button type="button" data-toggle="dropdown" class="p-0 mr-2 btn btn-link">
-                                <span class="icon-wrapper icon-wrapper-alt rounded-circle">
-                                    <span class="icon-wrapper-bg bg-focus"></span>
-                                    <span class="language-icon opacity-8 flag large US"></span>
-                                </span>
-                            </button>
-                            <div tabindex="-1" role="menu" aria-hidden="true" class="rm-pointers dropdown-menu dropdown-menu-right">
-                                <div class="dropdown-menu-header">
-                                    <div class="dropdown-menu-header-inner pt-4 pb-4 bg-focus">
-                                        <div class="menu-header-image opacity-05" style="background-image: url('assets/images/dropdown-header/city2.jpg');"></div>
-                                        <div class="menu-header-content text-center text-white">
-                                            <h6 class="menu-header-subtitle mt-0"> Choose Language</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h6 tabindex="-1" class="dropdown-header"> Popular Languages</h6>
-                                <button type="button" tabindex="0" class="dropdown-item">
-                                    <span class="mr-3 opacity-8 flag large FR"></span> France
-                                </button>
-                                <button type="button" tabindex="0" class="dropdown-item">
-                                    <span class="mr-3 opacity-8 flag large ES"></span>Spain
-                                </button>
-                       
-                            </div>
-                        </div>
-                    
-                    </div>
-
                     <div class="header-btn-lg pr-0">
                         <div class="widget-content p-0">
                             <div class="widget-content-wrapper">
                                 <div class="widget-content-left">
                                     <div class="btn-group">
                                         <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                            <img width="42" class="rounded-circle" src="{{asset('backend/images/avatars/1.jpg')}}" alt="">
+                                            <img width="42" class="rounded-circle" src="{{asset('backend/images/avatars/towhid.png')}}" alt="">
                                         </a>
                                         <div tabindex="-1" role="menu" aria-hidden="true" class="rm-pointers dropdown-menu-lg dropdown-menu dropdown-menu-right">
                                             <div class="dropdown-menu-header">
@@ -97,7 +66,7 @@
                                                         <div class="widget-content p-0">
                                                             <div class="widget-content-wrapper">
                                                                 <div class="widget-content-left mr-3">
-                                                                    <img width="42" class="rounded-circle" src="{{asset('backend/images/avatars/1.jpg')}}" alt="">
+                                                                    <img width="42" class="rounded-circle" src="{{asset('backend/images/avatars/towhid.png')}}" alt="{{auth()->user()->name}}">
                                                                 </div>
                                                                 <div class="widget-content-left">
                                                                     <div class="widget-heading">{{auth()->user()->name}}</div>
