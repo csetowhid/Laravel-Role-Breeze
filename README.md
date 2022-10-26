@@ -41,25 +41,13 @@ class User extends Authenticatable
 }
 ```
 
-## Step: 3 Add the necessary trait to your User model
-```
-use Spatie\Permission\Traits\HasRoles;
-
-class User extends Authenticatable
-{
-    use HasRoles;
-
-    // ...
-}
-```
-
-## Step: 5 Make Permission Controller 
+## Step: 4 Make Permission Controller 
 
 ```
  php artisan make:controller PermissionController --resource
 ```
 
-## Step: 6 Permission CRUD With default web guard
+## Step: 5 Permission CRUD With default web guard
 ### Add Group Name Field In Permissions Table
 ```
 Schema::create($tableNames['permissions'], function (Blueprint $table) {
@@ -73,15 +61,15 @@ Schema::create($tableNames['permissions'], function (Blueprint $table) {
         });
 ```
 
-## Step: 7 Make Role Controller 
+## Step: 6 Make Role Controller 
 
 ```
  php artisan make:controller RolesController --resource
 ```
 
-## Step: 8 Role CRUD
+## Step: 7 Role CRUD
 
-## Step: 9 Make User Controller 
+## Step: 8 Make User Controller 
 
 ```
  php artisan make:controller UserController --resource
